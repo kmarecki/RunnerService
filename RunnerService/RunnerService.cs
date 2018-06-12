@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Diagnostics;
 using System.Linq;
@@ -19,19 +20,18 @@ namespace RunnerService
 
         protected override void OnStart(string[] args)
         {
-            string script = @"c:\putty\mir-remote.bat";
+            string script = ConfigurationManager.AppSettings["OnStart"]; 
             ExecuteScript(script);
         }
 
         protected override void OnStop()
         {
-            string script = @"c:\putty\mir-remote-kill.bat";
+            string script = ConfigurationManager.AppSettings["OnStop"];
             ExecuteScript(script);
         }
 
         private Process ExecuteScript(string script)
         {
-            int exitCode;
             ProcessStartInfo processInfo;
             Process process;
 
