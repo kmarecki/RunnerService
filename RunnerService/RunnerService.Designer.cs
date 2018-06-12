@@ -1,6 +1,6 @@
-﻿namespace PlinkService
+﻿namespace RunnerService
 {
-    partial class Service1
+    partial class RunnerService
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,8 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
-            this.ServiceName = "Service1";
+            // 
+            // RunnerService
+            // 
+            this.ServiceName = "RunnerService";
+
         }
 
         #endregion

@@ -5,7 +5,7 @@ using System.ServiceProcess;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PlinkService
+namespace RunnerService
 {
     static class Program
     {
@@ -17,7 +17,7 @@ namespace PlinkService
             ServiceBase[] ServicesToRun;
             ServicesToRun = new ServiceBase[]
             {
-                new Service1()
+                new RunnerService()
             };
             ServiceBase.Run(ServicesToRun);
         }
